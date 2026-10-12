@@ -4328,7 +4328,7 @@ function UiView({ record, sessionId, sendPrompt, openFile, preview = false }) {
       const issues = [...native2, ...canvases.flatMap((v2) => v2.issues)].slice(0, 40), coverage = [native2.coverage, ...canvases.map((v2) => v2.coverage).filter(Boolean)].slice(0, 32);
       const report = { width: window.innerWidth, theme: document.body.hasAttribute("data-ds-dark-theme") ? "dark" : "light", issues, coverage };
       setAudit(report);
-      fetch("/api/plugins/dsh-generative-ui/document?" + new URLSearchParams({ documentId: record.documentId, sessionId }), { method: "POST", credentials: "same-origin", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ documentRevision: record.documentRevision ?? 0, report }) }).catch(() => {
+      fetch("/api/plugins/dsh-generative-ui/document?" + new URLSearchParams({ documentId: record.documentId, sessionId }), { method: "POST", credentials: "same-origin", headers: { "Content-Type": "application/json", "X-Requested-With": "XMLHttpRequest" }, body: JSON.stringify({ documentRevision: record.documentRevision ?? 0, report }) }).catch(() => {
       });
     }, 250);
   }, [record.documentId, record.documentRevision, sessionId, preview]);

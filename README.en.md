@@ -29,7 +29,7 @@ These screenshots come from real DSH development sessions. The first was proacti
 
 ## Compatibility and installation
 
-- Supports DSH **Web / Desktop**. The current repository explicitly declares compatibility with `0.2.0-rc.2`, `0.2.1-rc.1`, `0.2.1-rc.2` and `0.2.1-rc.3`; see [package.json](package.json).
+- Supports DSH **Web / Desktop**. The current repository explicitly declares compatibility with `0.2.0-rc.2`, `0.2.1-rc.1`, `0.2.1-rc.2`, `0.2.1-rc.3`, `0.2.1-rc.4` and `0.2.1-rc.5`; see [package.json](package.json).
 - Requires Node.js `>=22.19`. Everyday interfaces do not require the video toolchain; see video requirements below.
 
 For Desktop, install its `dsh` command through **Application → Manage dsh Command** first:

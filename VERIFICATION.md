@@ -378,3 +378,16 @@ All selected High effort. These single-run wall times include provider response,
 六种稳定风格 ID 和明亮扁平默认值保留。新增构图、文字层级、表面、控件、反例的统一风格语法；原生文字/卡片/指标/表单/流程/表格/复制块与扩展卡片/指标有独立形态。所有风格保留共享交互动效，反馈幅度/节奏适配语言，减少动态效果仍优先。设置提供六种布局预览（含控件表单），直接复用生产组件 CSS，预览不包含可操作控件。相同内容的深浅主题、黑白对照、显式文字样式优先、输入焦点及数值保留加入回归。自由模式不注入这些风格。当前保持 0.6.0，本轮不发布。
 
 模型实测补充：六种风格均实际交付；部分调用发生格式错误后由模型修正，记录不计为一次成功。进一步提示模型沿用风格默认字号/颜色，并在首个 heading 与文档标题完全相同时仅显示一个标题，保留显式文字样式和源文档。
+
+## 2026-10-31: DSH 0.2.1-rc.4 / rc.5 (local, unreleased)
+
+- `npm test` passed. The directly declared DSH development SDKs resolve to 0.2.1-rc.5.
+- Local package tarballs for all seven plugins installed into separate isolated Web profiles built from the official rc.4 and rc.5 templates. Each host started, served the authenticated Web UI, and showed all seven plugin pages as running without browser page exceptions.
+- DSH rc.3→rc.5 source comparison found a changed reasoning Body slot, which these plugins do not use. DSH compatibility and SDK peer ranges accept rc.4 and rc.5 while retaining prior declared versions; 0.2.2-alpha.2 is not claimed.
+- Rebuilt the client with the original Mermaid dependency version; all 149 unit/integration tests passed. Video playback and other full browser regression suites were not rerun for this compatibility-only change.
+- Native Desktop, external model calls, publication, and deployment were not exercised.
+
+## 2026-10-31: v0.8.9 release candidate
+
+- `npm run verify:release` passed all 29 steps, including 149 unit/integration tests, the rebuilt client, and browser regressions. The optional installed-host steps were not enabled.
+- This supersedes the earlier note that the full browser regression suites had not been rerun. Native Desktop and paid model calls remain untested.

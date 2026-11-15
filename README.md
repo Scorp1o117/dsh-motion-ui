@@ -29,7 +29,7 @@
 
 ## 兼容性与安装
 
-- 支持 DSH **Web / Desktop**；当前仓库明确声明兼容 `0.2.0-rc.2`、`0.2.1-rc.1`、`0.2.1-rc.2`、`0.2.1-rc.3`、`0.2.1-rc.4`、`0.2.1-rc.5`、`0.2.2-rc.1` 和 `0.2.2-rc.2`，以 [package.json](package.json) 为准。
+- 支持 DSH **Web / Desktop**。DSH 启动时允许 `0.2.0-rc.2`、`0.2.1-rc.1` 至 `0.2.1-rc.5`，以及 `0.2.2-rc.1` 起的所有版本（含后续预发布版）。已验证的版本见 [package.json](package.json) 中的 `dshReleases`。
 - 要求 Node.js `>=22.19`。日常界面不需要视频工具链；视频制作的额外要求见下文。
 
 Desktop 先在 **应用 → 管理 dsh 命令** 安装桌面版 `dsh`：
